@@ -3,6 +3,11 @@
 # If the highest number you both roll is below a 5, then you win.
 # Should you take the bet? What are the odds you would win if you played this game 100,000 times?
 from random import randint
+import sys
+
+answer = input("How many times should we roll the dice?")
+games = int(answer)
+
 def experiment(n):
 	count = 0
 	p1 = 0
@@ -20,6 +25,4 @@ def experiment(n):
 	print("Player 2 wins: ", p2)
 	print("Total Games Played: ", p1 + p2)
 	
-experiment(1000)
-
-	
+experiment(games)

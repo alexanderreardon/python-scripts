@@ -1,9 +1,9 @@
-from bs4 import BeautifulSoup
-import urllib
+import bs4 as bs
+import urllib.request
 import sys
 
 url = sys.argv[1]
 content = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(content)
+soup = bs.BeautifulSoup(content)
 for link in soup.find_all('a'):
     print(link.get('href'))

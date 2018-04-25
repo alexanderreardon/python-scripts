@@ -1,8 +1,6 @@
 # Originally developed for Bryant REDDay 2018 Presentation
-
-import bs4
+import bs4, sys
 from urllib.request import urlopen
-import sys
 
 def getLinks(url):
 	# Adds HTTP protocol if not specified in user input:
